@@ -18,12 +18,30 @@ Opera 10+ ...... compatible ✔
 >------/main.js
 >--/scripts
 >------/require.js
+>------/jquery-3.2.1.min
 >--/index.html
 
 ##### 导入文件
 
 ```html
 <script src="scripts/require.js" data-main="js/main"></script>
+```
+##### main.js配置
+```js
+requirejs.config({
+	baseUrl:'scripts/',//基础路径
+	paths:{
+		jquery:"jquery-3.2.1.min"//路径下的文件名不需要加后缀
+	},
+	shim:{//依赖模块
+		//'文件名':['被依赖文件']
+	}
+});
+define(["jquery"],function($){
+	$("button").click(function(){
+		alert("success");
+	});
+});
 ```
 
 
