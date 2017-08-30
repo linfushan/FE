@@ -72,7 +72,6 @@ var html = template(__dirname + '/tpl-user.art', {
     <script type="text/javascript" src="template-web.js"></script>
 </head>
 <body>
-    <a href="http://aui.github.io/art-template/docs/">参考文档</a>
     <div id="content"></div>
     <script id="test" type="text/html">
     {{if isAdmin}}
@@ -97,5 +96,7 @@ var html = template(__dirname + '/tpl-user.art', {
 </body>
 </html>
 ```
+运行结果：
+![](/assets/TIM截图20170830151320.png)
 #####更多内容参考
 [官方文档](https://aui.github.io/art-template/docs/)
