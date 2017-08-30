@@ -5,7 +5,7 @@
 
 [artTemplate](https://aui.github.io/art-template/) 是新一代 javascript 模板引擎，它采用预编译方式让性能有了质的飞跃，并且充分利用 javascript 引擎特性，使得其性能无论在前端还是后端都有极其出色的表现。在 chrome 下渲染效率测试中分别是知名引擎 Mustache 与 micro tmpl 的 25 、 32 倍。
 
-![](/assets/chart@2x.png)
+![](/assets/2.png)
 ![](/assets/1.png)
 
 #####特性
@@ -97,6 +97,6 @@ var html = template(__dirname + '/tpl-user.art', {
 </html>
 ```
 运行结果：
-![](/assets/TIM截图20170830151320.png)
+![](/assets/3.png)
 #####更多内容参考
 [官方文档](https://aui.github.io/art-template/docs/)
