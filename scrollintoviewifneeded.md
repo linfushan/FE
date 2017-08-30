@@ -2,9 +2,9 @@
 
 ```js
 $(document).on('click','input[type="text"]', function () {
-var target = this;
-setTimeout(function(){
-target.scrollIntoViewIfNeeded();
-},400);
+  var target = this;
+  setTimeout(function(){
+    target.scrollIntoViewIfNeeded();
+  },400);
 });
 ```
