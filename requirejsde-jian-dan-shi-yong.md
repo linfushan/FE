@@ -8,6 +8,8 @@ Safari 3.2+ .... compatible ✔
 Chrome 3+ ...... compatible ✔  
 Opera 10+ ...... compatible ✔
 
+requirejs的优点就是即使你反复的require,也都只加载一次
+
 ##### 下载文件
 
 下载地址：[GitHub-requirejs](https://github.com/linfushan/FILES/blob/master/require.js)
@@ -37,12 +39,12 @@ requirejs.config({
 		//'文件名':['被依赖文件']
 	}
 });
-define(["jquery"],function($){
+define(["jquery"],function($){//定义依赖模块
 	$("button").click(function(){
 		alert("success");
 	});
 });
 ```
-
+> 参考文件：[阮一峰requirejs的用法](http://www.ruanyifeng.com/blog/2012/11/require_js.html)
 
 
