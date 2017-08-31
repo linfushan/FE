@@ -90,8 +90,8 @@
 背景|background|bg
 背景颜色|backgroundcolor|bgc
 背景图片|backgroundimage|bgi
-背景定位	backgroundposition|bgp
-边框颜色	bordercolor|bdc
+背景定位|backgroundposition|bgp
+边框颜色|bordercolor|bdc
 ######状态（.z-）
 语义|命名|简写
 ---|:---:|:---
