@@ -60,7 +60,7 @@ table {
 ######链接
 ```css
 :link,:visited{
-    text-decoration:none
+    text-decoration:none;
 }
 ```
 ######金手指
