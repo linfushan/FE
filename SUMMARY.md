@@ -7,5 +7,5 @@
 * [AMD和CMD的差异](amdhe-cmd-de-cha-yi.md)
 * [art-template](art-template.md)
 * [CSS 规范](css-gui-fan.md)
-* [cssreset](reset.md)
+* [cssreset](cssreset.md)
 
