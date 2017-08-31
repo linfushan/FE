@@ -41,7 +41,6 @@ body,h1,h2,h3,h4,h5,h6,p,blockquote,pre,hr,figure, dl,dd,ul,ol,fieldset,menu{mar
 ul,ol,button,th,td,fieldset,legend,textarea,menu{padding:0}
 ```
 
-
 ##### HTML5新标签针对旧浏览器重置
 
 ```css
@@ -50,42 +49,54 @@ header,footer,section,article,aside,nav,hgroup,address,figure,figcaption,menu,de
 
 ##### 其它元素样式重置
 
-######body
+###### body
+
 ```css
 body{
     line-height:1;
 }
 ```
-######字体大小
+
+###### 字体大小
+
 ```css
 h1,h2,h3,h4,h5,h6,pre{
     font-size:100%;
 }
 ```
-######列表
+
+###### 列表
+
 ```css
 ol,ul{
     list-style:none;
 }
 ```
-######表格
+
+###### 表格
+
 ```css
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
 ```
-######链接
+
+###### 链接
+
 ```css
 :link,:visited{
     text-decoration:none;
 }
 ```
-######金手指
+
+###### 金手指
+
 ```css
 a,button,input[type='button']{
     cursor:pointer;
 }
 ```
+
 
 
