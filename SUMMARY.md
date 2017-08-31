@@ -9,4 +9,5 @@
 * [CSS 规范](css-gui-fan.md)
 * [cssreset](cssreset.md)
 * [scrollToTop](scrolltotop.md)
+* [用css写幻灯片](yong-css-xie-huan-deng-pian.md)
 
