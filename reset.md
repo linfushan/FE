@@ -46,7 +46,28 @@ header,footer,section,article,aside,nav,hgroup,address,figure,figcaption,menu,de
 
 ######列表
 ```css
-ol,ul{list-style:none;}
+ol,ul{
+    list-style:none;
+}
+```
+######表格
+```css
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+```
+######链接
+```css
+:link,:visited{
+    text-decoration:none
+}
+```
+######金手指
+```css
+a,button,input[type='button']{
+    cursor:pointer;
+}
 ```
 
 
