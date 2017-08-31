@@ -21,19 +21,19 @@
 
 @-webkit-keyframes "loops" {
     0% {
-        background: url(https://github.com/linfushan/FE/blob/master/assets/ani1.png) no-repeat;
+        background: url(https://raw.githubusercontent.com/linfushan/FE/master/assets/ani1.png) no-repeat;
     }
     25% {
-        background: url(https://github.com/linfushan/FE/blob/master/assets/ani2.png) no-repeat;
+        background: url(https://raw.githubusercontent.com/linfushan/FE/master/assets/ani2.png) no-repeat;
     }
     50% {
-        background: url(https://github.com/linfushan/FE/blob/master/assets/ani3.png) no-repeat;
+        background: url(https://raw.githubusercontent.com/linfushan/FE/master/assets/ani3.png) no-repeat;
     }
     75% {
-        background: url(https://github.com/linfushan/FE/blob/master/assets/ani4.png) no-repeat;
+        background: url(https://raw.githubusercontent.com/linfushan/FE/master/assets/ani4.png) no-repeat;
     }
     100% {
-        background: url(https://github.com/linfushan/FE/blob/master/assets/ani1.png) no-repeat;
+        background: url(https://raw.githubusercontent.com/linfushan/FE/master/assets/ani1.png) no-repeat;
     }
 }
 ```
