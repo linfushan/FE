@@ -1,4 +1,4 @@
-# reset
+# css style reset
 
 ##### 查看默认样式
 
