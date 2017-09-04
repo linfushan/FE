@@ -80,6 +80,6 @@ s; // Set {1, 2}
 
 Map和Set是ES6标准新增的数据类型，请根据浏览器的支持情况决定是否要使用。
 
-> 本文摘自：[廖雪峰Map和Set](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/0014345007434430758e3ac6e1b44b1865178e7aff9082e000)
+> 本文摘自：[廖雪峰Map和Set](https://www.liaoxuefeng.com)
 
 
