@@ -15,4 +15,5 @@
 * [css hack](css-hack.md)
 * [array](array.md)
 * [Map和Set](maphe-set.md)
+* [apply\(\)和call\(\)](applyhe-call.md)
 
