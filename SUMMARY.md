@@ -16,4 +16,5 @@
 * [array](array.md)
 * [Map和Set](maphe-set.md)
 * [apply\(\)和call\(\)](applyhe-call.md)
+* [map\(\)](map.md)
 
