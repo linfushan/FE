@@ -17,4 +17,5 @@
 * [Map和Set](maphe-set.md)
 * [apply\(\)和call\(\)](applyhe-call.md)
 * [map\(\)](map.md)
+* [input中直接使用正则](inputzhong-zhi-jie-shi-yong-zheng-ze.md)
 
