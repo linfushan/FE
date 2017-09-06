@@ -98,5 +98,18 @@ a,button,input[type='button']{
 }
 ```
 
+##### 利用伪类清除浮动
 
+```css
+.clearfix:after {
+    content:".";
+    display:block; 
+    height:0;
+    visibility:hidden; 
+    clear:both; 
+}
+.clearfix { 
+    *zoom:1; 
+}
+```
 
