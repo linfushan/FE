@@ -38,10 +38,10 @@ IE:6.0+，FireFox:2.0+，Opera 10.0+，Sarari 3.0+，Chrome
 ```css
 .bb{
     height:32px;
-    background-color:#f1ee18;/*所有识别*/
+    background-color:#f1ee18;    /*所有识别*/
     .background-color:#00deff\9; /*IE6、7、8识别*/
-    +background-color:#a200ff;/*IE6、7识别*/
-    _background-color:#1e0bd1;/*IE6识别*/
+    +background-color:#a200ff;   /*IE6、7识别*/
+    _background-color:#1e0bd1;   /*IE6识别*/
 }
 /*一个用于展示的class为bb的div标签*/
 < div class ="bb"></ div >
@@ -309,6 +309,33 @@ IE:6.0+，FireFox:2.0+，Opera 10.0+，Sarari 3.0+，Chrome
 </div>
 </body>
 </html>
+```
+
+---
+
+```css
+#test{   
+    width:300px;   
+    height:300px;         
+    background-color:blue;      /*firefox*/
+    background-color:red\9;     /*all ie*/
+    background-color:yellow\0;  /*ie8*/
+    +background-color:pink;     /*ie7*/
+    _background-color:orange;   /*ie6*/
+}  
+:root #test {
+    background-color:purple\9;
+}  /*ie9*/
+@media all and (min-width:0px){
+    #test {
+        background-color:black\0;
+    }
+}  /*opera*/
+@media screen and (-webkit-min-device-pixel-ratio:0){
+    #test {
+        background-color:gray;
+    } 
+} /*chrome and safari*/
 ```
 
 ---
