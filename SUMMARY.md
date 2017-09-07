@@ -21,5 +21,5 @@
 * [json字符串和json对象互转](jsonzi-fu-chuan-he-json-dui-xiang-hu-zhuan.md)
 * [offset、client、scroll](offsetclientscroll.md)
 * [Date](date.md)
-* [&lt;meta&gt;元素](metayuan-su.md)
+* [meta元素](metayuan-su.md)
 
