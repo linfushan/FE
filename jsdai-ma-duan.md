@@ -47,3 +47,9 @@ window.onload = function() {
 </body>
 </html>
 ```
+
+#### 浏览器默认图标favicon
+```html
+<link rel="Bookmark" href="favicon.ico">
+<link rel="Shortcut Icon" href="favicon.ico">
+```
