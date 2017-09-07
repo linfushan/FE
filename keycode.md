@@ -22,7 +22,7 @@ alert(n);//A
 
 ##### 事件绑定
 
-**onkeypress、onkeydown或onkeyup**
+###### onkeypress、onkeydown或onkeyup
 
 ```html
 <!DOCTYPE html>
