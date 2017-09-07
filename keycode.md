@@ -46,5 +46,5 @@ alert(n);//A
 
 ##### keyCode 值
 
-![](/assets/keycode.png)
+![](/assets/keyCode.png)
 
