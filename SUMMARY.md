@@ -23,4 +23,5 @@
 * [Date](date.md)
 * [meta元素](metayuan-su.md)
 * [keyCode](keycode.md)
+* [抛物线parabola](pao-wu-xian-parabola.md)
 
