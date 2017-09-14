@@ -161,5 +161,59 @@ $("a").changeColor({
 所以，一般来说都会使用第二种方式传递参数。
 
 ####面向对象插件开发
+为什么要有面向对象的思维，因为如果不这样，你可能需要一个方法的时候就去定义一个function，当需要另外一个方法的时候，再去随便定义一个function，同样，需要一个变量的时候，毫无规则地定义一些散落在代码各处的变量。
+
+还是老问题，不方便维护，也不够清晰。当然，这些问题在代码规模较小时是体现不出来的。
+
+如果将需要的重要变量定义到对象的属性上，函数变成对象的方法，当我们需要的时候通过对象来获取，一来方便管理，二来不会影响外部命名空间，因为所有这些变量名还有方法名都是在对象内部。
+```js
+;(function($,window,document,undefined){
+    // 变量声明
+    var pluginName = "changecolor",
+        defauts = {
+            "colorArr":['#3793e2','#5ab55a','#cc3f65','#a526cb'],
+            "backgroundColor":"#eee",
+            "fontSize":"14px"
+        };
+    // 构造函数
+    function changeColor(ele,options){
+        this.element = ele;
+        this.settings = $.extend({},defauts,options);
+        this.changecolor();
+        this.hover();
+    };
+    changeColor.prototype= {
+        changecolor: function(){
+            var i = Math.round(Math.random()*(this.settings.colorArr.length-1)),
+                arr = this.settings.colorArr[i],
+                bg = this.settings.backgroundColor,
+                fz = this.settings.fontSize;
+            return $(this.element).each(function(){
+                $(this).css({
+                    "color":arr,
+                    "backgroundColor":bg,
+                    "fontSize":fz
+                });
+            });
+        },
+        hover: function(){
+            $(this.element).each(function(){
+               $(this).hover(function(){
+                   $(this).css("color","#fff");
+               }); 
+            });
+        }
+    };
+    $.fn[pluginName] = function(options){
+        this.each(function(){
+            if(!$.data(this,pluginName)){
+                $.data(this,pluginName,new changeColor(this,options));
+            }
+        });
+        return this;
+    }
+})(jQuery,window,document);
+```
+
 
 未完待续。。。
