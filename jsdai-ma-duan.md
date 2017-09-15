@@ -1,4 +1,5 @@
-####获取类
+#### 获取类
+
 ```js
 /*
 * getByClass(父元素，要获取的类)
@@ -6,49 +7,51 @@
 */
 function getByClass(oParent, sClass)
 {
-	var aEle=oParent.getElementsByTagName('*');
-	var aTmp=[];
-	var i=0;
-	
-	for(i=0;i<aEle.length;i++)
-	{
-		if(aEle[i].className==sClass)
-		{
-			aTmp.push(aEle[i]);
-		}
-	}
-	
-	return aTmp;
+    var aEle=oParent.getElementsByTagName('*');
+    var aTmp=[];
+    var i=0;
+
+    for(i=0;i<aEle.length;i++)
+    {
+        if(aEle[i].className==sClass)
+        {
+            aTmp.push(aEle[i]);
+        }
+    }
+
+    return aTmp;
 }
 ```
 
-####获取样式
+#### 获取样式
+
 ```js
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
+    <meta charset="UTF-8">
+    <title>Document</title>
 </head>
 <script type="text/javascript">
 function getStyle(obj, attr) {
-	if (obj.currentStyle) {
-		return obj.currentStyle[attr];
-	} else {
-		return getComputedStyle(obj, false)[attr];
-	}
+    if (obj.currentStyle) {
+        return obj.currentStyle[attr];
+    } else {
+        return getComputedStyle(obj, false)[attr];
+    }
 }
 window.onload = function() {
-	alert(getStyle(document.getElementById("div1"), 'fontSize'));
+    alert(getStyle(document.getElementById("div1"), 'fontSize'));
 }
 </script>
 <body>
-	<div id="div1">getStyle</div>
+    <div id="div1">getStyle</div>
 </body>
 </html>
 ```
 
 #### 浏览器默认图标favicon
+
 ```html
 <link rel="Bookmark" href="favicon.ico">
 <link rel="Shortcut Icon" href="favicon.ico">
@@ -128,12 +131,12 @@ function trim(arr){
 function getElementsByClassName(parentObj,classStr){  
   var result = [];  
   var objs = parentObj.getElementsByTagName('*');  
-    
+
   //如果classStr用空格分隔，则表示class必须同时满足才有效  
   var targetArr1 = noRepeat(trim(classStr).split(/\s+/));  
   //如果classStr用逗号分隔，则表示class只要有一个满足就有效  
   var targetArr2 = noRepeat(trim(classStr).split(/\s*,\s*/));  
-      
+
   if(classStr.indexOf(',') == -1 ){  
     //用空格分隔或者只有一个class  
     label: for(var i = 0; i < objs.length; i++){  
@@ -156,12 +159,12 @@ function getElementsByClassName(parentObj,classStr){
             continue label;  
           }  
         }  
-            
+
       }  
       return result;     
     }  
 }  
-    
+
 //addclass函数封装  
 function addClass(obj,classStr){  
   var array = noRepeat(trim(obj.className).split('\s+'));  
@@ -192,7 +195,30 @@ function toggleClass(obj,classStr){
 }  
 </script>  
 </body>  
-</html>    
+</html>
 ```
+
+#### 获取鼠标的位置
+
+```js
+// jQuery
+_getMoustPos:function(){
+     var e = e || window.event;
+     var x = e.pageX || e.clientX + document.body.scroolLeft;
+     var y = e.pageY || e.clientY + document.body.scrollTop;
+     return { 'x': x, 'y': y };
+});
+
+// javascript
+_getMoustPos:function(){
+   var e = event || window.event;
+   var scrollX = document.documentElement.scrollLeft || document.body.scrollLeft;
+   var scrollY = document.documentElement.scrollTop || document.body.scrollTop;
+   var x = e.pageX || e.clientX + scrollX;
+   var y = e.pageY || e.clientY + scrollY;
+   return { 'x': x, 'y': y };
+}
+```
+
 
 
