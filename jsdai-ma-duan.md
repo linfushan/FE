@@ -204,10 +204,43 @@ function toggleClass(obj,classStr){
 // jQuery
 _getMoustPos:function(){
      var e = e || window.event;
-     var x = e.pageX || e.clientX + document.body.scroolLeft;
+     var x = e.pageX || e.clientX + document.body.scrollLeft;
      var y = e.pageY || e.clientY + document.body.scrollTop;
      return { 'x': x, 'y': y };
 });
+///////////////////////////jQuery三种获得鼠标坐标的方///////////////////////////
+<script type="text/javascript">
+    $(document).ready(function () {
+      $(".box").mousemove(function(e){
+        var screen_x = e.screenX;
+        var screen_y = e.screenY;
+        var client_x = e.clientX;
+        var client_y = e.clientY;
+        var page_x = e.pageX;
+        var page_y = e.pageY;
+        $(".box span").eq(0).text(screen_x+"/"+screen_y);
+        $(".box span").eq(1).text(client_x+"/"+client_y);
+        $(".box span").eq(2).text(page_x+"/"+page_y);
+      });
+    });
+  </script>
+  <style>
+    .box{
+      width: 200px;
+      height: 200px;
+      border: 2px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    screen:<span></span><br>
+    client:<span></span><br>
+    page:<span></span>
+  </div>
+</body>
+///////////////////////////jQuery三种获得鼠标坐标的方///////////////////////////
+
 
 // javascript
 _getMoustPos:function(){
@@ -218,6 +251,8 @@ _getMoustPos:function(){
    var y = e.pageY || e.clientY + scrollY;
    return { 'x': x, 'y': y };
 }
+
+
 ```
 
 
