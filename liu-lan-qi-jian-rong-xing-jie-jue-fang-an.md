@@ -13,7 +13,7 @@
 例子：
 
 ```html
-<!--[if lt IE 9]>
+<!--[if lt IE 9]>
     // CODE HERE
 <![endif]-->
 ```
@@ -73,11 +73,11 @@ transform:rotate(7deg);         // 统一标识语句
 ```html
 <div class="box" id="box">
   <p>Lorem ipsum dolor sit.</p>
- 
+
   <div style="overflow: hidden;">
     <p>Lorem ipsum dolor sit.</p>
   </div>
- 
+
   <p>Lorem ipsum dolor sit.</p>
 </div>
 ```
@@ -153,7 +153,7 @@ body {
 
 #### td 自动换行的问题
 
-问题：`table `宽度固定，`td` 自动换行
+问题：`table`宽度固定，`td` 自动换行
 
 解决：设置 Table 为 `table-layout: fixed`，td 为 `word-wrap: break-word`
 
@@ -172,15 +172,15 @@ function getKeyCode(e) {
 // 浏览器窗口可视区域大小（不包括工具栏和滚动条等边线）
 var client_w = document.documentElement.clientWidth || document.body.clientWidth;
 var client_h = document.documentElement.clientHeight || document.body.clientHeight;
- 
+
 // 网页内容实际宽高（包括工具栏和滚动条等边线）
 var scroll_w = document.documentElement.scrollWidth || document.body.scrollWidth;
 var scroll_h = document.documentElement.scrollHeight || document.body.scrollHeight;
- 
+
 // 网页内容实际宽高 (不包括工具栏和滚动条等边线）
 var offset_w = document.documentElement.offsetWidth || document.body.offsetWidth;
 var offset_h = document.documentElement.offsetHeight || document.body.offsetHeight;
- 
+
 // 滚动的高度
 var scroll_Top = document.documentElement.scrollTop||document.body.scrollTop;
 ```
@@ -193,17 +193,17 @@ var eventshiv = {
     getEvent: function(event) {
         return event ? event : window.event;
     },
- 
+
     // type兼容
     getType: function(event) {
         return event.type;
     },
- 
+
     // target兼容
     getTarget: function(event) {
         return event.target ? event.target : event.srcelem;
     },
- 
+
     // 添加事件句柄
     addHandler: function(elem, type, listener) {
         if (elem.addEventListener) {
@@ -215,7 +215,7 @@ var eventshiv = {
             elem['on' + type] = listener;
         }
     },
- 
+
     // 移除事件句柄
     removeHandler: function(elem, type, listener) {
         if (elem.removeEventListener) {
@@ -226,7 +226,7 @@ var eventshiv = {
             elem['on' + type] = null;
         }
     },
- 
+
     // 添加事件代理
     addAgent: function (elem, type, agent, listener) {
         elem.addEventListener(type, function (e) {
@@ -235,7 +235,7 @@ var eventshiv = {
             }
         });
     },
- 
+
     // 取消默认行为
     preventDefault: function(event) {
         if (event.preventDefault) {
@@ -244,7 +244,7 @@ var eventshiv = {
             event.returnValue = false;
         }
     },
- 
+
     // 阻止事件冒泡
     stopPropagation: function(event) {
         if (event.stopPropagation) {
@@ -254,6 +254,48 @@ var eventshiv = {
         }
     }
 };
+```
+
+#### 垂直居中
+
+```html
+/*
+  此方法兼容所有的浏览器
+*/
+
+<style media="screen">
+  *{margin: 0;padding: 0;}
+  .parent{
+    width: 200px;
+    height: 200px;
+    border: 1px solid #eee;
+
+    *font-size:175.44px;/*在IE6/7中使用 200/1.14=175.44*/
+    /*IE8及以上和其它浏览器使用此方法*/
+    display: table-cell;
+    vertical-align: middle;
+    /*---------------------------*/
+    text-align: center;
+  }
+  .child{
+    height: 50px;
+    width: 50px;
+    border: 1px solid #f60;
+
+    display: inline-block;/*text-align:center对块元素无用*/
+    /*在IE6/7中实现inline-block*/
+    *vertical-align: middle;
+    *zoom:1;
+    /*------------------------*/
+    *display: inline;/*此句结合font-size使用*/
+  }
+</style>
+<body>
+  <div class="parent">
+    <div class="child"></div>
+  </div>
+</body>
+</html>
 ```
 
 
