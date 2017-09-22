@@ -27,4 +27,5 @@
 * [Create a Basic Plugin](create-a-basic-plugin.md)
 * [节点元素操作](jie-dian-yuan-su-cao-zuo.md)
 * [浏览器兼容性解决方案](liu-lan-qi-jian-rong-xing-jie-jue-fang-an.md)
+* [奇技修BUG](qi-ji-xiu-bug.md)
 
